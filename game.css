@@ -1,0 +1,164 @@
+html{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(325deg, black 0%, purple 30%, pink 70%, white 100%);
+    overflow: hidden;
+    list-style: none;
+}
+
+.button{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: 0;
+    cursor: pointer;
+    font-family: 'acme';
+    font-size: 20px;
+    font-weight:bold;
+    box-shadow: 4px 4px 6px gray;
+    margin-left: 65px;
+}
+
+.button:hover{
+    background-color: purple;
+    color: palevioletred;
+    transition-duration: 1.5s;
+}
+
+.igra{
+    position: absolute;
+    top: 5%;
+    left: 42%;
+    transform: translate(-15%, -15%);
+}
+
+.controls{
+    display: flex;
+    gap: 38px;
+    margin-bottom: 20px;
+}
+
+.input{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: 0;
+    cursor: pointer;
+    font-family: 'acme';
+    font-size: 20px;
+    font-weight:bold;
+    box-shadow: 4px 4px 6px gray;
+}
+.input:hover{
+    background-color: purple;
+    color: pink;
+    transition-duration:  1.5s;
+}
+
+a{
+    float: right;
+    margin-top: 60px;
+    
+}
+
+.home{
+    width: 40px;
+    box-shadow: 3px 3px 6px black;
+
+}
+.home:hover{
+    background-color: purple;
+    transition-duration:  1.5s;
+}
+
+
+
+p{
+    text-align: center;
+    font-family: 'acme';
+    text-shadow: 4px 4px 6px gray;
+}
+
+.shadow{
+    box-shadow: 3px 3px 6px black;
+}
+
+.desno{
+    float: right;
+    margin-right: 8%;
+    margin-left: 6%;
+}
+
+.levo{
+    float: left;
+    margin-left: 8%;
+}
+
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 100vh;
+    padding: 10px;
+    width: calc(10px - 10px); 
+    height: calc(730px - 20px);
+}
+
+.card {
+    position: relative;
+    perspective: 800px;
+    margin-left: 234px;
+    margin-top: 55px;
+  }
+
+
+  .card:hover{
+    transform: translate(-3px, -1px);
+    transition: 0.2s;
+  }
+  
+  .card-inner {
+    position: absolute;
+    width: calc(50px - 1px); 
+    height: calc(50px - 20px);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    
+  }
+  
+  .image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 225px;
+    height: 225px;
+    margin-left: 273px;
+  }
+
+  .front-image,
+  .back-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 7px solid black;
+  }
+  
+  .back-image {
+    transform: rotateY(180deg);
+    opacity: 0;
+  }
+  
+  .card.flipped .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card.flipped .back-image {
+    opacity: 1;
+  }
+  
